@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Share Tech");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+@keyframes scroll {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scan {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  25%,
+  35%,
+  45%,
+  70%,
+  85%,
+  100% {
+    opacity: 0.15795;
+  }
+  5%,
+  15%,
+  20%,
+  40%,
+  55%,
+  65%,
+  75%,
+  80%,
+  90% {
+    opacity: 0.94554;
+  }
+  10%,
+  30%,
+  50%,
+  60%,
+  95% {
+    opacity: 0.0293;
+  }
+  50% {
+    opacity: 0.3823;
+  }
+}
+
+html,
+body {
+  background: #383838;
+  color: #00dd00;
+  font-size: 64.5%;
+  font-size: 1.7rem;
+  font-family: "Share Tech", sans-serif;
+  max-height: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  line-height: 100%;
+  margin: 0;
+}
+
+p span {
+  display: inline-block;
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: red;
+}
+
+.overlay:before {
+  background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+  background-size: 100% 0.188rem, 0.375rem 100%;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.overlay:after {
+  animation: flicker 0.3s infinite;
+  background: rgba(16, 16, 16, 0.2);
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.wrapper {
+  animation: scroll 5s 1;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.content {
+  animation: scroll 3s 1;
+  overflow: hidden;
+  padding: 2rem 2rem 0 2rem;
+  position: relative;
+  width: 95%;
+}
+
+.greenline {
+  animation: scroll 10s 5s infinite;
+  background: linear-gradient(to bottom, rgba(0, 221, 0, 0), rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+  display: block;
+  height: 1.25rem;
+  opacity: 0.05;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5%;
+  z-index: 2;
+}
+
+.clear {
+  clear: both;
+}
+
+main {
+  margin-top: 3rem;
+}
+h5 {
+  text-align: end;
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 1.3rem;
+  }
+  h5 {
+    margin-top: 60vh;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  html,
+  body {
+    font-size: 1rem;
+  }
+  h5 {
+    margin-top: 70vh;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html,
+  body {
+    font-size: 0.954rem;
+  }
+  .content {
+    padding: 1rem 1rem 0 1rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+}

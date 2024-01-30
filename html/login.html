@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="/artem_web/css/login.css">
+    <script src="/artem_web/js/login.js"></script>
+    <link rel="icon" type="image/x-icon" href="/artem_web/img/icon.ico">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="greenline"></div>
+    <div class="wrapper">
+        <div class="content">
+            <header>
+                <div>
+                    <h4>
+                        Enter Password: <br>
+                    </h4>
+                    <p>To access the terminal, please enter the admin password</p>
+                    <p>----------------------------------------</p>
+                </div>
+            </header>
+            <div class="clear"></div>
+            <main>  
+                <form id="loginform">
+                <input type="password" title="passwrd" id="passwrd" name="passwrd" required minlength="4" maxlength="4">
+                <div class="clear"></div>
+                <button type="button" id="loginbutton" onclick="submitForm()">Login</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
